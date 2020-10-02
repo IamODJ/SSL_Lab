@@ -1,0 +1,283 @@
+% Assignment-1 LaTeX Submission
+% By Omkar D Jadhav
+% 190010029, CSE
+
+\documentclass{article}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{blindtext}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{authblk}
+\usepackage{multirow}
+\usepackage{geometry}
+\renewcommand{\floatpagefraction}{.8}%
+\geometry{a4paper}
+\begin{document}
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+\title{CS203 Assignment 1 - Working with \LaTeX}
+\author{Omkar Jadhav}
+\affil{ \linespread{1.3}Department of Computer Science and Engineering , IIT Dharwad
+      \\ Email \texttt{190010029@iitdh.ac.in} }  % Using teletype font for email
+\date{2\textsuperscript{nd} September 2020}
+\maketitle
+\section{Top 4 frontend frameworks (Usage of Figures)} %first section
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[l]{0.4\textwidth}
+    \includegraphics[width=\textwidth,scale=0.5]{reactjs.png}
+    \caption{Reactjs}
+    \label{fig:Reactjs}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[c]{0.4\textwidth}
+    \includegraphics[width=\textwidth,scale=0.5]{svelte.png}
+    \caption{Svelte}
+    \label{fig:Svelte}
+  \end{minipage}
+\end{figure}
+
+\subsection{Reactjs}
+ React~\ref{fig:Reactjs} is a declarative efficient and flexible library for building user inferfaces. Originally created by Jordan Walke, the framework helps the designers to create interactive UIs faster than ever.
+ \subsection{Svelte}
+ Svelte~\ref{fig:Svelte} is a free and open source framework developed by Rich Harris. Released in 2016, the framework got its popularity within 3 years. The author has laid down new approaches for DOM manipulation and it is very popular in the community currently.
+
+\newpage
+\begin{figure}[H] 
+  \centering
+  \begin{minipage}[l]{0.4\textwidth}  % minipage used for side to side image layout
+    \includegraphics[width=\textwidth,scale=0.5]{vuejs.png}
+    \caption{Vuejs}
+    \label{fig:Vuejs}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[c]{0.4\textwidth}
+    \includegraphics[width=\textwidth,scale=0.5]{preact.png}
+    \caption{Preact}
+    \label{fig:Preact}
+  \end{minipage}
+\end{figure}
+
+ \subsection{Vuejs}
+Vue.js is an open-source model–view–viewmodel JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members coming from various companies such as Netlify and Netguru.
+ \subsection{Preact}
+Preact is a 3kb version of React with same modern API
+
+\section{Usage of tables}
+\begin{table}[!h] 
+\Large
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+     & \multicolumn{4}{|c|}{Countries}\\
+     \cline{2-5}
+Year & India & Afghanistan & Bangladesh & Bhutan \\ 
+\hline
+2000 & 1.8 & 1.9 & 1.4 & 1.3 \\
+2005 & 1.5 & 1.9 & 1.4 & 1.3 \\
+2006 & 1.4 & 2.0 & 1.3 & 1.9\\
+2007 & 1.5 & 2.0 & 1.3 & 1.9 \\
+2008 & 1.4 & 2.0 & 1.3 & 1.9 \\
+2009 & 1.4 & 2.0 & 1.3 & 1.8 \\
+2010 & 1.4 & 1.9 & 1.3 & 1.8 \\
+2011 & 1.3 & 1.9 & 1.3 & 1.8 \\
+\hline
+      
+\end{tabular}
+\caption{Population Growth rate}
+\label{tab:PGR}
+\end{table}
+\newpage
+
+\begin{table}[!h]
+\Large
+\centering
+\begin{tabular}{|c|c|c|c|c|} %vertical lines 
+\hline
+\multicolumn{3}{|c|}{\multirow{2}{*}{Nested multicol-multirow}}& A & B \\ 
+\cline{4-5}
+\multicolumn{3}{|c|}{}&C&D\\
+\hline
+E&F&\multicolumn{3}{|c|}{multicol}\\
+\hline
+\multicolumn{5}{|c|}{G}\\  
+\hline
+\end{tabular}
+\caption{Dummy table}
+\label{tab:Dummy}
+\end{table}
+
+\section{Mathematics section}
+\Large
+This $x^2+y^2=z^2$ is an inline equation.
+$$e^{i\pi} +1 = 0$$
+Above we have an equation in a dedicated line without numbering.
+\begin{equation}
+    (a + b)^2= a^2+2ab+b^2
+\end{equation}
+Above we have a numbered equation.
+\begin{eqnarray*}
+    \cos 2\theta & =  & \cos^2 \theta - \sin^2 \theta \\
+                 & =  & 2 \cos^2 \theta -1
+\end{eqnarray*}
+Above we have a multiline equation. \\
+\[
+\begin{pmatrix}
+1 & 5 & 9 \\
+a & b & c \\
+3 & 6 & 9 \\
+\end{pmatrix}
+\]
+Above we have a matrix with parenthesis.
+\[
+\begin{pmatrix}
+a & c & \dots \\
+\vdots & \ddots &  \\
+b &  & d \\
+\end{pmatrix}
+\]
+Another matrix with dots. \\
+Square root of 121 is $\sqrt{121}= 11$ . (usage of square root)\\
+$$\sum_{k=1}^{n} k = \frac{n(n+1)}{2}$$ 
+Above we see one of the most basic usage of Summation.
+\newpage
+$$\int e^x dx = e^x$$
+$$\iint_V \sigma(u,v) \,dv \,du$$
+
+Above we see basic usage of single and multiple integrals
+\[ 
+\left[  \frac{ a } { \left( \frac { \left\{ b + c \right\} }{d} \right)  - (f+g) }  \right]
+\]
+\[ 
+ \Bigg \langle \frac{ \big( a+b \big) } { c }\Bigg \rangle
+\]
+Above we see usage of fractions as well as nested parantheses/brackets with varying size. \\
+
+\section{Font styles}
+\subsection{Bold font}
+\textbf{\blindtext}\\
+\subsection{Italic font}
+\textit{\blindtext}\\
+\subsection{Teletype font}
+\texttt{\blindtext}\\
+\subsection{Small caps font}
+\textsc{\blindtext}\\
+
+\section{Colour}
+\subsection{Text colour}
+\textcolor{red}{This text is red in colour.} \\
+\textcolor{green}{This text is green in colour.}\\
+\textcolor{orange}{This text is orange in colour}\\
+\subsection{Text background}
+The basic colours used to build other ones are \colorbox{red}{Red}, \colorbox{green}{Green} and \colorbox{blue}{Blue}
+\newpage
+\pagecolor{black}
+\color{white}
+\subsection{\textcolor{white}{Page colour}}
+\vspace{100mm}
+\begin{center}
+    \textcolor{white}{This page is intentionally coloured in black}
+\end{center}
+\newpage
+\pagecolor{white}
+\color{black}
+\section{Lists}
+\subsection{Itemize list}
+\begin{itemize}
+    \item This is the start of the list
+    \item In this type of list items have bullet points with them.
+    \item It is also called unordered list.
+    \item This is the end of the list
+\end{itemize}
+\subsection{Enumerate list}
+\begin{enumerate}
+    \item This is the start of the list
+    \item In this type of list items have numbering with them.
+    \item It is also called ordered list.
+    \item This is the end of the list
+\end{enumerate}
+\subsection{Description list}
+\begin{description}
+    \item [First] 
+    This is the start of the list
+    \item [Second] 
+    In this type of list items have title attached  with them.
+    \item [Third]
+    It is also called Descriptive list.
+    \item [Fourth]
+    This is the end of the list
+\end{description}
+
+\newpage
+\section{Pseudocodes}
+\begin{algorithm}
+\Large
+\caption{\Large Quicksort with last element default pivot}
+\begin{algorithmic}
+\STATE Quicksort(array A,int begin, int end)
+\IF{$begin < end$}
+\STATE pivot $\leftarrow$ A[end]
+\STATE part $\leftarrow$ Partition(A,begin,end,pivot)
+\STATE Quicksort(A,begin,part-1)
+\STATE Quicksort(A,part+1,end)
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
+
+ 
+\begin{algorithm}[!h]
+\Large
+\caption{\Large Partition}
+\begin{algorithmic}
+\STATE Partition(array A,int left, int right,int pivot)
+\STATE $l \leftarrow left$
+\STATE $r \leftarrow right-1$
+\WHILE{TRUE}
+\WHILE{$A[l] < pivot$}
+\STATE $l\leftarrow l+1$
+\ENDWHILE
+\WHILE{$A[r] > pivot$ \AND $r > 0$}
+\STATE $r\leftarrow r-1$
+\ENDWHILE
+\IF{$l >= r$}
+\STATE \textbf{break}
+\ELSE
+\STATE swap $A[l] \leftrightarrow A[r]$
+\ENDIF
+\ENDWHILE
+\STATE swap $A[l] \leftrightarrow A[right]$
+\RETURN $l$
+\end{algorithmic}
+\end{algorithm}
+\newpage
+\begin{thebibliography}{9}
+\bibitem{bibitem1} 
+Worldometers: Population growth data,
+\\\texttt{https://www.worldometers.info/world-population/india-population/}
+
+\bibitem{bibitem2} 
+The State of JS 2019, rankings,
+\\\texttt{https://2019.stateofjs.com/}
+
+\bibitem{bibitem3} 
+Tutorialspoint
+\\\texttt{https://www.tutorialspoint.com/}
+
+\bibitem{bibitem4} 
+Tex Stackexchange
+\\\texttt{https://tex.stackexchange.com/}
+
+\bibitem{bibitem5} 
+Wikibooks, \LaTeX
+\\\texttt{https://en.wikibooks.org/wiki/LaTeX}
+\end{thebibliography}
+\end{document}

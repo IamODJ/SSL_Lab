@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome Checker</title>
+	<script type="text/javascript">
+		function CheckPalindrome() {
+		var x=document.getElementById("textinp").value;
+		if(x==="")
+		{
+			alert("Please enter a string.");
+		}
+		else{
+			var size=x.length;
+			x=x.toLowerCase();
+			var flag=0;
+			for(var i=0,j=size-1;i<=size/2;i++,j--)
+			{
+				if(x.charAt(i)!==x.charAt(j))
+				{
+					flag=-1;
+					break;
+				}
+			}
+			if(flag===0)
+				alert(x+" is palindromic.");
+			else
+				alert(x+" is not palindromic.");
+
+
+
+		}
+	}
+	</script>
+</head>
+<body>
+<h1>A handy tool to check if a string is palindromic</h1>
+<label for="textinp">Enter a string: </label>
+<input type="text" id="textinp" required>
+<input type="submit" value="Submit" onclick="CheckPalindrome();">
+</body>
+</html>

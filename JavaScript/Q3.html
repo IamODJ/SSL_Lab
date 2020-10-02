@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Most Frequent Character</title>
+	<script type="text/javascript">
+		function CheckOccurrence() {
+		var x=document.getElementById("textinp").value;
+		if(x==="")
+		{
+			alert("Please enter a string.");
+		}
+		else{
+			document.getElementById("unblock").style="opacity:1";
+			var size=x.length;
+			var mostfreq=1;
+			var freq=0;
+			var mostfreqchar;
+			var inptxt= document.getElementById("putinp1");
+			inptxt.innerHTML="";
+            document.getElementById("putinp2").innerHTML="Most Frequent Character: ";
+			document.getElementById("putinp3").innerHTML="Number of Occurrences: ";
+			for(var i=0;i<size;i++)
+			{
+				if(i != size-1)
+				{
+					inptxt.innerHTML+=x.charAt(i)+',';
+				}
+				else
+				{
+					inptxt.innerHTML+=x.charAt(i);
+
+				}
+				for(var j=i; j<size ; j++)
+				{
+					if(x.charAt(i)==x.charAt(j))
+					{
+						freq++;
+					}
+					if(freq>mostfreq)
+					{
+						mostfreq=freq;
+						mostfreqchar=x.charAt(i);
+					}
+				}
+				freq=0;
+
+			}
+			document.getElementById("putinp2").innerHTML+=mostfreqchar;;
+			document.getElementById("putinp3").innerHTML+=mostfreq;;
+			
+
+
+
+		}
+	}
+	</script>
+</head>
+<body>
+<h1>Enter a string and we'll find you the most occurring character.</h1>
+<label for="textinp">Enter the string (eg:Hello)</label>
+<input type="text" id="textinp"  required>
+<input type="submit" value="Submit" onclick="CheckOccurrence();">
+<ul type="circle" id="unblock" style="opacity:0">
+	<li>Input
+		<ul type="square">
+			<li id="putinp1"></li>
+		</ul>
+	</li>
+	<li>Output
+		<ul type="square">
+			<li id="putinp2"></li>
+			<li id="putinp3"></li>
+
+		</ul>
+	</li>
+</ul>
+
+<div id="putmax" style="text-align: center;">
+
+</body>
+</html>

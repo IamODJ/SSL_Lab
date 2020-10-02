@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>License Checker</title>
+	<script type=text/javascript>
+		function check() {
+			var x= document.getElementById("age").value;
+
+			if(!(Number.isInteger(parseInt(x))))
+			{
+				alert("Please enter a valid age");
+
+			}
+			else{
+			if(parseInt(x)>=18 && parseInt(x)<=100)
+			{
+				alert("You are eligible for the license!")
+			}
+			else{
+				alert("Sorry, you are not eligible for the license.");
+
+			}
+		}
+
+		}
+	</script>
+</head>
+<body>
+
+	<h1><marquee>License Checker</marquee></h1>
+	<div style="margin:auto">
+			<h2 style="margin:auto;text-align:center;">Check whether you are eligible for license, just by entering your age.</h2><br/><br/>
+
+		<form style="margin:auto;text-align:center;">
+	<label for="age" style="margin:auto;text-align:center;">Age:</label>
+	<input type="text" id="age" required>
+	<br/><br/>
+	<input type="submit" value="Submit" onclick="check();">
+       </form>
+     </div>
+</body>
+</html>

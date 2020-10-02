@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q4</title>
+	 <style>
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+#fdata tr:nth-child(even){
+	background-color:#cccccc;
+
+}
+#fdata tr:nth-child(odd){
+	background-color:#999999;
+
+}
+
+</style>
+	<script type="text/javascript">
+		class User{
+			constructor()
+			{
+				this.Name="";
+				this.Address="";
+				this.Phone_Number="";
+				this.EmailID="";
+				this.Educational_Qualifications="";
+				this.Age="";
+			}
+			display()
+			{
+				this.Name=document.getElementById("user_name").value;
+				this.Address=document.getElementById("user_addr").value;
+				this.Phone_Number=document.getElementById("user_phno").value;
+				this.EmailID=document.getElementById("user_eid").value;
+				this.Educational_Qualifications=document.getElementById("user_qual").value;
+				this.Age=document.getElementById("user_age").value;
+
+				if(this.Name=="" || this.Address=="" || this.Phone_Number=="" || this.EmailID=="" || this.Educational_Qualifications=="" || this.Age=="")
+					alert("Please Enter all details");
+
+				else{
+				document.getElementById("fdata").style="opacity:1; margin-left:30px;";
+				document.getElementById("name").innerHTML=this.Name;
+				document.getElementById("addr").innerHTML=this.Address;
+				document.getElementById("phno").innerHTML=this.Phone_Number;
+				document.getElementById("eid").innerHTML=this.EmailID;
+				document.getElementById("qual").innerHTML=this.Educational_Qualifications;
+				document.getElementById("age").innerHTML=this.Age;
+			}
+			}
+		}
+		user= new User();
+	</script>
+</head>
+<body>
+<h1>Fill in the following details</h1>
+
+
+<label for="user_name" >Name:</label>
+<input type="text" id="user_name" required><br/><br/>
+<label for="user_addr">Address:</label>
+<input type="text" id="user_addr"  required><br/><br/>
+<label for="user_phno">Phone Number:</label>
+<input type="text" id="user_phno"  required><br/><br/>
+<label for="user_eid">Email ID:</label>
+<input type="email" id="user_eid"  required><br/><br/>
+<label for="user_qual">Educational Qualifications:</label>
+<input type="text" id="user_qual"  required><br/><br/>
+<label for="user_age">Age:</label>
+<input type="number" id="user_age"  required><br/><br/>
+<input type="submit" value="Submit" onclick="user.display()">
+
+<!-- <input type="submit" value="Submit" onclick="user.display();">
+ -->
+<br/><br/>
+
+ <table id="fdata" style="opacity:0 ; margin-left:30px;">
+  <tr>
+    <td >User.Name</td>
+    <td id="name"></td>
+  </tr>
+   <tr>
+    <td >User.Address</td>
+    <td id="addr"></td>
+  </tr>
+    <tr>
+    <td >User.Phone Number</td>
+    <td id="phno"></td>
+  </tr>
+    <tr>
+    <td >User.EmailID</td>
+    <td id="eid"></td>
+  </tr>
+    <tr>
+    <td >User.Educational Qualifications</td>
+    <td id="qual"></td>
+  </tr>
+    <tr>
+    <td >User.Age</td>
+    <td id="age"></td>
+  </tr>
+  
+
+</table>
+</body>
+</html>

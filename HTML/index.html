@@ -1,0 +1,216 @@
+<!-- CS213 Assignment 3
+HTML and CSS
+Submitted by Omkar D Jadhav
+190010029
+ -->
+
+<!DOCTYPE html>  
+<html>
+<head>
+  <title>HTML Assignment</title>
+<!--   linking stylsheet here
+ -->  
+ <link rel="stylesheet" type="text/css" href="./style.css">
+<!--  Styles for table
+ -->  
+ <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+<!--   Navigation bar
+ -->  <nav class="zone blue">
+    <ul class="main-nav"> 
+        <li><a href="#About">About</a></li>
+        <li><a href="#Skill">Skillset</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li class="push"><a href="#Contact">Contact Me</a></li>
+    </ul>
+  </nav>
+  <div class="container zonebody">
+    <div class="subcont">
+      <div>
+        <h1> Welcome to my <abbr title="(Second ever)">HTML</abbr> page.</h1>
+    <h2>Hello! my name is <a style=color:#800080;> Omkar Jadhav</a>,</h2>
+    <h3>A Sophomore at IIT Dharwad.</h3>
+
+     
+   </div>
+     <img src="./img/omkar.jpg"/>
+      </div>
+      <br>
+      
+      <p>Here I have tried to use many <mark>HTML elements</mark> including <i>text formatting</i>, forms, images etc. To make it interesting I have tried to include my portfolio with the projects and skills I possess so far. </p>
+
+      <section id="About"> <h2 style=color:#800080;>About Me</h2>
+        <p>I am an enthusiastic individual who always thrives to make the most out of the opportunities.When I was 14 I got to know about programming and if I recall it correctly this is the first code I ever wrote.
+      
+      <pre>
+      <cite>My first C program</cite>  <a href="https://www.javatpoint.com/first-c-program"> Hello World </a>
+
+         <code>
+#include&lt;std.h&gt;
+int main()
+{
+   printf("Hello /n");
+   printf("World");
+
+   return 0;
+} 
+      </code>
+      </pre>
+     <p>Yes, it had some mistakes like,
+      <ol type="1">
+        <li><del>std.h</del> should be <ins>stdio.h</ins></li>
+        <li><del>/n</del> should be <ins>\n</ins></li>
+      </ol>
+      <br/>
+      <p> It all started from those small mistakes but now I am glad that I have got the opportunity to study Computer Science at a premiere institute like IIT Dharwad (visit their webpage <a href="https://www.iitdh.ac.in" target="_blank"> here </a> )</p>
+
+    </section>
+
+    <section>
+      <h2 style=color:#800080;>Educational background</h2>
+ <table style="width:80%">
+  <tr>
+    <th rowspan="2">Qualifiying Exam</th>
+    <th colspan="2">Details</th>
+  </tr>
+  <tr>
+    <th>School</th>
+    <th>Grade/Marks</th>
+  </tr>
+  <tr>
+    <td>10th grade, CBSE</td>
+    <td>Kendriya Vidyalaya, GK</td>
+    <td>98.6%</td>
+  </tr>
+    <tr>
+    <td>12th grade, CBSE</td>
+    <td>Kendriya Vidyalaya, GK</td>
+    <td>95.4%</td>
+  </tr>
+   <tr>
+    <td>1st year, IIT Dharwad</td>
+    <td>IIT Dharwad</td>
+    <td>9.33 CPI</td>
+  </tr>
+
+</table>
+    </section>
+
+    <section id="Projects">
+      <h2 style=color:#800080;>My Projects</h2>
+      <ul type="square">
+        <li>Farmax- <em>A farming assistant.</em> Find it <a href="https://play.google.com/store/apps/details?id=com.bestie.baymax.farmax&hl=en" target="_blank">here</a></li>
+         <li>Mobileguru- <em>A digital library for KVKG Students.</em> Find it <a href="https://play.google.com/store/apps/details?id=com.bestie.baymax.farmax&hl=en" target="_blank">here</a></li>
+         <li>Farming bot <em>InterIIT Tech Meet 8.0 project</em></li>
+ </ul>
+
+    </section>
+
+    <section id="Skill">
+      <h2 style=color:#800080;>Programming Skillset</h2>
+ <table style="width:80%">
+  <tr>
+    <th >Domain</th>
+    <th>Programming Languages</th>
+  </tr>
+  <tr>
+    <td>Text formatting</td>
+    <td>Latex</td>
+  </tr>
+  <tr>
+    <td rowspan="2"> Basic languages</td>
+    <td>C/C++</td>
+  </tr>
+    <tr>
+    <td>Python</td>
+    </tr>
+    <tr>
+    <td rowspan="3"> Web development</td>
+    <td>HTML</td>
+  </tr>
+<tr>
+    <td>CSS</td>
+    </tr>
+    <tr>
+    <td>JavaScript</td>
+    </tr>
+    <tr>
+    <td rowspan="1"> Microcontrollers</td>
+    <td>Arduino IDE (based on C++)</td>
+  </tr>
+<tr>
+    <td rowspan="2"> Database management</td>
+    <td>SQL</td>
+  </tr>
+<tr>
+    <td>MongoDB</td>
+    </tr>
+
+</table>
+    </section>
+<section>
+  <h2 style=color:#800080;>Hobbies</h2>
+  <p>Apart programming, I like spending time in sports (cricket particularly) , trekking ,reading fiction based books and listening to sound tracks.<br/> Here is one of my favorite soundtrack from Interstellar.<br/>
+        <audio src="./img/audio.mp3" controls> Your browser is not supporting this format. </audio>
+<br/>
+   Following is a video clip and an image gallery which includes reasons why we should keep ourselves close to nature.</p> 
+<div style={width:80%;margin:auto}>
+<video src="./img/videoplayback.mp4" controls> Your browser is not supporting this format. </video>
+</div>
+<br/>
+</section>
+
+  </div>
+  <div class="zone blue grid-wrapper">
+    <div class="box zone"><img src="./img/img1.jpg"></div>
+    <div class="box zone"><img src="./img/img2.jpg"></div>
+    <div class="box zone"><img src="./img/img3.jpg"></div>
+    <div class="box zone"><img src="./img/img4.jpg"></div>
+    <div class="box zone"><img src="./img/img5.jpg"></div>
+    <div class="box zone"><img src="./img/img6.jpg"></div>
+  </div>
+  <div class="zonebody contact" >
+    <section id="Contact">
+      <h2 style=color:#800080;> Contact Me:</h2>
+        <h3>Leave a message for me through this form</h3>
+        <form method="GET">
+<!--           using required tag to prevent incomplete forms
+ -->    First Name: <input type="text" name="firstname" required><br>
+    Last Name: <input type="text" name="lasttname"><br>
+    Email: <input type="email" name="email" required><br>
+    Password(for further interactions): <input type="password" name="password" minLength="5" required><br>
+    Birthday: <input type="date" name="birthday" required><br>
+    Gender:<br>
+    <input type="radio" name="gender" value="Male">Male<br>
+    <input type="radio" name="gender" value="Female">Female<br>
+    <input type="radio" name="gender" value="Other">Other<br>
+    Message type: <br>
+    <select name="Choose">
+      <option value="suggestion" >Suggestion</option>
+      <option value="feedback">Feedback</option>
+      <option value="general">General</option>
+        </select><br>
+
+<label for="msg">Message:</label>
+<textarea id="msg" name="msg" rows="4" cols="50">
+  Type your message here.</textarea>
+  <br/>
+    <input type="submit" value="Register!">
+    <input type="reset">
+  </form>
+    </section>
+  </div>
+  <footer class="zone blue">Made by Omkar D Jadhav, CSE IIT Dharwad</footer>
+</div>
+</body>
+</html>

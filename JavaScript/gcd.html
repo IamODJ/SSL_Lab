@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find GCD</title>
+	<script type="text/javascript">
+		function FindGCD() {
+		var x=document.getElementById("textinp1").value;
+		var y=document.getElementById("textinp2").value;
+
+		if(!(Number.isInteger(parseInt(x))) || !(Number.isInteger(parseInt(y))))
+			{
+				alert("Please enter valid integers");
+
+			}
+		else{
+			var first=parseInt(x);
+			var second=parseInt(y);
+			var gcd= function(p,q)
+			{
+				if(q==0){
+					return p;
+				}
+				return gcd(q, p % q);
+
+			};
+			var element= document.getElementById("putgcd");
+			element.innerHTML = "GCD of "+first+" and "+second+" is "+gcd(first,second);
+
+
+		}
+	}
+	</script>
+</head>
+<body>
+<h1>A handy tool to compute GCD of 2 numbers</h1>
+<label for="textinp">Enter first integer:</label>
+<input type="text" id="textinp1"  required><br/><br/>
+<label for="textinp">Enter second integer</label>
+<input type="text" id="textinp2"  required><br/><br/>
+<input type="submit" value="Find GCD" onclick="FindGCD();"><br/><br/>
+<div id="putgcd" style="text-align: start;">
+	</div>
+</body>
+</html>

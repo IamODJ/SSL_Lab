@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generate Fibonacci sequence</title>
+	<script type="text/javascript">
+		function fibonacci() {
+		var x=document.getElementById("textinp").value;
+
+		if(!(Number.isInteger(parseInt(x))) || parseInt(x)<1)
+			{
+				alert("Please enter valid integer greater than zero.");
+
+			}
+		else{
+			var element= document.getElementById("putfibonacci");
+			element.innerHTML="";
+			element.innerHTML+="Here is your fibonacci sequence: "
+			var n=parseInt(x);
+			if(n===1)
+			{
+				element.innerHTML+="0";
+				console.log("Called1");
+			}
+			else if(n===2)
+			{
+				element.innerHTML+="0, 1";
+				console.log("Called2");
+
+			}
+			else{
+				var first=0;
+				var second=1;
+				var temp;
+				element.innerHTML+="0, 1,";
+				while(n>2)
+				{
+					temp=second;
+					second=second+first;
+					first=temp;
+					if(n==3)
+					element.innerHTML+=" "+second;
+					else
+					element.innerHTML+=" "+second+",";
+
+					n--;
+				}
+			}
+
+		}
+	}
+	</script>
+</head>
+<body>
+<h1>Generate Fibonacci numbers.</h1>
+<label for="textinp">Enter how many fibonacci numbers do you want.</label>
+<input type="text" id="textinp"  required>
+<input type="submit" value="Generate" onclick="fibonacci();"><br/><br/>
+<div id="putfibonacci">
+	</div>
+</body>
+</html>
